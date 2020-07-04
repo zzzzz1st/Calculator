@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>351</width>
-    <height>315</height>
+    <width>377</width>
+    <height>259</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_3">
-    <item row="0" column="0">
+    <item row="0" column="0" colspan="2">
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
        <widget class="QLineEdit" name="var0">
@@ -23,10 +23,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>0.</string>
+         <string>-7.</string>
         </property>
        </widget>
       </item>
@@ -36,10 +36,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>1.</string>
+         <string>-6.</string>
         </property>
        </widget>
       </item>
@@ -52,10 +52,10 @@
          <set>Qt::ImhNone</set>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>2.</string>
+         <string>-5.</string>
         </property>
        </widget>
       </item>
@@ -65,10 +65,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>3.</string>
+         <string>-4.</string>
         </property>
        </widget>
       </item>
@@ -78,10 +78,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>4.</string>
+         <string>-3.</string>
         </property>
        </widget>
       </item>
@@ -91,10 +91,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>5.</string>
+         <string>-2.</string>
         </property>
        </widget>
       </item>
@@ -104,10 +104,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>6.</string>
+         <string>-1.</string>
         </property>
        </widget>
       </item>
@@ -117,10 +117,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>7.</string>
+         <string>0.</string>
         </property>
        </widget>
       </item>
@@ -130,10 +130,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>8.</string>
+         <string>1.</string>
         </property>
        </widget>
       </item>
@@ -143,10 +143,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>9.</string>
+         <string>2.</string>
         </property>
        </widget>
       </item>
@@ -156,10 +156,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>10.</string>
+         <string>3.</string>
         </property>
        </widget>
       </item>
@@ -169,10 +169,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>11.</string>
+         <string>4.</string>
         </property>
        </widget>
       </item>
@@ -182,10 +182,10 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>12.</string>
+         <string>5.</string>
         </property>
        </widget>
       </item>
@@ -195,16 +195,16 @@
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
         </property>
         <property name="inputMask">
-         <string>9999.999</string>
+         <string>#9999.999</string>
         </property>
         <property name="text">
-         <string>13.</string>
+         <string>6.</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
-    <item row="0" column="1">
+    <item row="0" column="2" colspan="2">
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
        <widget class="QLabel" name="label">
@@ -232,7 +232,7 @@
 </string>
         </property>
         <property name="text">
-         <string>13</string>
+         <string>6</string>
         </property>
         <property name="scaledContents">
          <bool>false</bool>
@@ -280,7 +280,7 @@
          <string notr="true">background-color: rgb(0, 170, 255);</string>
         </property>
         <property name="text">
-         <string>0</string>
+         <string>-7</string>
         </property>
        </widget>
       </item>
@@ -325,7 +325,7 @@
          <string notr="true">background-color: rgb(0, 170, 255);</string>
         </property>
         <property name="text">
-         <string>91</string>
+         <string>-7</string>
         </property>
        </widget>
       </item>
@@ -370,7 +370,7 @@
          <string notr="true">background-color: rgb(0, 170, 255);</string>
         </property>
         <property name="text">
-         <string>6.5</string>
+         <string>-0.5</string>
         </property>
        </widget>
       </item>
@@ -392,27 +392,53 @@
       </item>
      </layout>
     </item>
-    <item row="1" column="1">
-     <widget class="QPushButton" name="pushButton">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_5">
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">font: 75 italic 24pt &quot;Times New Roman&quot;;</string>
       </property>
       <property name="text">
-       <string>Calculate</string>
-      </property>
-      <property name="checkable">
-       <bool>false</bool>
-      </property>
-      <property name="checked">
-       <bool>false</bool>
-      </property>
-      <property name="autoRepeat">
-       <bool>false</bool>
-      </property>
-      <property name="autoExclusive">
-       <bool>false</bool>
+       <string>Calculator</string>
       </property>
      </widget>
+    </item>
+    <item row="1" column="1" colspan="2">
+     <widget class="QFrame" name="frame">
+      <property name="minimumSize">
+       <size>
+        <width>44</width>
+        <height>37</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>44</width>
+        <height>37</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/images/calculator_icon.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <spacer name="horizontalSpacer_5">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>161</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
     </item>
    </layout>
   </widget>

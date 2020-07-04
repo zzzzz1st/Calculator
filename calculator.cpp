@@ -19,6 +19,8 @@ Calculator::Calculator(QWidget *parent)
     qobs.push_back(ui->minValue);
     qobs.push_back(ui->sumValue);
     qobs.push_back(ui->medianValue);
+
+    ui->statusbar->showMessage("Please Insert a Number...");
 }
 
 float Calculator::maxCalc(){
@@ -72,84 +74,98 @@ void Calculator::notifyObservers(){
 
 void Calculator::on_var0_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot0 has been changed");
     values[0]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var1_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot1 has been changed");
     values[1]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var2_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot2 has been changed");
     values[2]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var3_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot3 has been changed");
     values[3]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var4_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot4 has been changed");
     values[4]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var5_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot5 has been changed");
     values[5]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var6_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot6 has been changed");
     values[6]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var7_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot7 has been changed");
     values[7]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var8_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot8 has been changed");
     values[8]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var9_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot9 has been changed");
     values[9]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var10_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot10 has been changed");
     values[10]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var11_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot11 has been changed");
     values[11]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var12_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot12 has been changed");
     values[12]=arg1.toFloat();
     notifyObservers();
 }
 
 void Calculator::on_var13_textChanged(const QString &arg1)
 {
+    ui->statusbar->showMessage("Slot13 has been changed");
     values[13]=arg1.toFloat();
     notifyObservers();
 }
