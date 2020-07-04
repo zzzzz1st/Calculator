@@ -20,7 +20,7 @@ Calculator::Calculator(QWidget *parent)
     qobs.push_back(ui->sumValue);
     qobs.push_back(ui->medianValue);
 
-    ui->statusbar->showMessage("Please Insert a Number...");
+    ui->statusbar->showMessage("Please insert a number...");
 }
 
 float Calculator::maxCalc(){
@@ -168,4 +168,21 @@ void Calculator::on_var13_textChanged(const QString &arg1)
     ui->statusbar->showMessage("Slot13 has been changed");
     values[13]=arg1.toFloat();
     notifyObservers();
+}
+
+//Getter functions For Unit Testing
+
+
+float Calculator::getValue(int i) const
+{
+    return values[i];
+}
+
+QLabel *Calculator::getQobs(int i)
+{
+    return qobs [i];
+}
+
+QLineEdit *Calculator::getQsubs(int i){
+    return qsubs[i];
 }

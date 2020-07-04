@@ -15,7 +15,20 @@ class Calculator : public QMainWindow
 
 public:
     Calculator(QWidget *parent = nullptr);
+    void notifyObservers();
+    float maxCalc();
+    float minCalc();
+    float sumCalc();
+    float medianCalc();
     ~Calculator();
+
+    //Setter and Getter For Unit Testing
+
+    QLineEdit *getQsubs(int i);
+
+    QLabel *getQobs(int i);
+
+    float getValue(int i) const;
 
 private slots:
 
@@ -52,10 +65,5 @@ private:
     QVector<QLineEdit*> qsubs;
     QVector<QLabel*> qobs;
     std::vector <float> values;
-    void notifyObservers();
-    float maxCalc();
-    float minCalc();
-    float sumCalc();
-    float medianCalc();
 };
 #endif // CALCULATOR_H
