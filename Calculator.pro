@@ -34,3 +34,6 @@ RESOURCES += \
     recources.qrc
 
 RC_FILE = iconres.rc
+
+SUBDIRS += \
+    UnitTesting/UnitTesting.pro
