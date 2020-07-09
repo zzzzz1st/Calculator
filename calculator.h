@@ -2,8 +2,9 @@
 #define CALCULATOR_H
 
 #include <QMainWindow>
-#include <QLineEdit>
+#include <QTableWidget>
 #include <QLabel>
+#include <model.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Calculator; }
@@ -14,56 +15,29 @@ class Calculator : public QMainWindow
     Q_OBJECT
 
 public:
-    Calculator(QWidget *parent = nullptr);
-    void notifyObservers();
-    float maxCalc();
-    float minCalc();
-    float sumCalc();
-    float medianCalc();
+    Calculator(Model *m, QWidget *parent = nullptr);
     ~Calculator();
 
-    //Setter and Getter For Unit Testing
+    QLabel *getQmax();
 
-    QLineEdit *getQsubs(int i);
+    QLabel *getQmin();
 
-    QLabel *getQobs(int i);
+    QLabel *getQsum();
 
-    float getValue(int i) const;
+    QLabel *getQmedian();
+
+    QTableWidget *getQtable();
 
 private slots:
-
-    void on_var0_textChanged(const QString &arg1);
-
-    void on_var1_textChanged(const QString &arg1);
-
-    void on_var2_textChanged(const QString &arg1);
-
-    void on_var3_textChanged(const QString &arg1);
-
-    void on_var4_textChanged(const QString &arg1);
-
-    void on_var5_textChanged(const QString &arg1);
-
-    void on_var6_textChanged(const QString &arg1);
-
-    void on_var7_textChanged(const QString &arg1);
-
-    void on_var8_textChanged(const QString &arg1);
-
-    void on_var9_textChanged(const QString &arg1);
-
-    void on_var10_textChanged(const QString &arg1);
-
-    void on_var11_textChanged(const QString &arg1);
-
-    void on_var12_textChanged(const QString &arg1);
-
-    void on_var13_textChanged(const QString &arg1);
+    void on_tableWidget_itemChanged(QTableWidgetItem *item);
 
 private:
     Ui::Calculator *ui;
-    QVector<QLineEdit*> qsubs;
-    QVector<QLabel*> qobs;
-    std::vector <float> values;
+    QLabel *qmax;
+    QLabel *qmin;
+    QLabel *qsum;
+    QLabel *qmedian;
+    QTableWidget *qtable;
+    Model *model;
 };
 #endif // CALCULATOR_H

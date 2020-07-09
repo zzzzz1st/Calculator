@@ -16,11 +16,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    controller.cpp \
     main.cpp \
-    calculator.cpp
+    calculator.cpp \
+    max.cpp \
+    median.cpp \
+    min.cpp \
+    model.cpp \
+    sum.cpp \
+    view.cpp
 
 HEADERS += \
-    calculator.h
+    Observer.h \
+    Subject.h \
+    calculator.h \
+    controller.h \
+    max.h \
+    median.h \
+    min.h \
+    model.h \
+    sum.h \
+    view.h
 
 FORMS += \
     calculator.ui
@@ -36,4 +52,4 @@ RESOURCES += \
 RC_FILE = iconres.rc
 
 SUBDIRS += \
-    UnitTesting/UnitTesting.pro
+    unit/UnitTesting.pro
