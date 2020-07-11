@@ -1,13 +1,24 @@
 #include "sum.h"
 
-Sum::Sum(Model *m) : Controller(m){}
+Sum::Sum(Model *m, QLabel *v){
+    model = m;
+    model->addObserver(this);
+    qlabel = v;
+}
 
-float Sum::calculate() {
+void Sum::update(){
     float sum = 0;
-        for (int i = 0 ; i < 4 ; i++){
-            for (int j = 0 ; j < 4 ; j++)
+    int row = model->getRow();
+    int column = model->getColumn();
+        for (int i = 0 ; i < row ; i++){
+            for (int j = 0 ; j < column ; j++)
             sum += model->getDataset(i,j);
         }
-        return sum;
+        qlabel->setNum(sum);
 }
+
+Sum::~Sum() {
+    model->removeObserver(this);
+}
+
 

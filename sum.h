@@ -1,12 +1,23 @@
 #ifndef SUM_H
 #define SUM_H
-#include <controller.h>
+#include <Observer.h>
+#include <model.h>
+#include <QLabel>
 
-class Sum : public Controller {
+//this class can access the model recources.
+
+class Sum : public Observer {
 
 public:
-    Sum(Model *m);
-    float calculate() override;
+
+    Sum(Model *m, QLabel *v);
+    virtual void update() override;
+    virtual ~Sum();
+
+private:
+    Model *model;
+    QLabel *qlabel;
+
 
 };
 

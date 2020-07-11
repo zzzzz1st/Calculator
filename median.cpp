@@ -1,15 +1,24 @@
 #include "median.h"
-#include <vector>
-#include <algorithm>
 
-Median::Median(Model *m) : Controller(m){}
+Median::Median(Model *m, QLabel *v){
+    model = m;
+    model->addObserver(this);
+    qlabel = v;
+}
 
-float Median::calculate() {
+void Median::update(){
    std::vector <float> vtmp;
-   for (int i = 0 ; i < 4 ; i++){
-       for (int j = 0 ; j <4 ; j++)
+   int row = model->getRow();
+   int column = model->getColumn();
+   for (int i = 0 ; i < row ; i++){
+       for (int j = 0 ; j < column ; j++)
            vtmp.push_back(model->getDataset(i,j));
    }
    std::sort(vtmp.begin(), vtmp.end());
-   return (vtmp[7]+vtmp[8])/2;
+   float tmp = (vtmp[7]+vtmp[8])/2;
+   qlabel->setNum(tmp);
+}
+
+Median::~Median() {
+    model->removeObserver(this);
 }

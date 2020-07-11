@@ -4,8 +4,7 @@
 #include <QMainWindow>
 #include <QTableWidget>
 #include <QLabel>
-#include <model.h>
-
+#include <controller.h>
 QT_BEGIN_NAMESPACE
 namespace Ui { class Calculator; }
 QT_END_NAMESPACE
@@ -15,7 +14,7 @@ class Calculator : public QMainWindow
     Q_OBJECT
 
 public:
-    Calculator(Model *m, QWidget *parent = nullptr);
+    Calculator(Controller *c, QWidget *parent = nullptr);
     ~Calculator();
 
     QLabel *getQmax();
@@ -38,6 +37,6 @@ private:
     QLabel *qsum;
     QLabel *qmedian;
     QTableWidget *qtable;
-    Model *model;
+    Controller *controller;
 };
 #endif // CALCULATOR_H

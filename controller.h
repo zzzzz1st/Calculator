@@ -1,17 +1,23 @@
-#ifndef FORMULA_H
-#define FORMULA_H
+#ifndef CONTROLLER_H
+#define CONTROLLER_H
+#include <iostream>
+#include <QMessageBox>
+
+//Controller knows how to handle a changed text. it controlls the application.
 
 #include<model.h>
+#include <QTableWidgetItem>
 
 
 class Controller
 {
 public:
-     Controller(Model* m);
-     virtual float calculate() = 0;
+     Controller(Model *m);
+     void itemChanged(QTableWidgetItem *item);
 
-protected:
+private:
      Model *model;
+     std::list<Observer*> observers;
 };
 
-#endif // FORMULA_H
+#endif // CONTROLLER_H

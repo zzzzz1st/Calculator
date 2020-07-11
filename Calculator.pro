@@ -23,8 +23,7 @@ SOURCES += \
     median.cpp \
     min.cpp \
     model.cpp \
-    sum.cpp \
-    view.cpp
+    sum.cpp
 
 HEADERS += \
     Observer.h \
@@ -35,8 +34,7 @@ HEADERS += \
     median.h \
     min.h \
     model.h \
-    sum.h \
-    view.h
+    sum.h
 
 FORMS += \
     calculator.ui

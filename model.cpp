@@ -1,19 +1,23 @@
 #include "model.h"
 
-Model::Model(){
+Model::Model(int r, int c) : row(r), column(c){
+    dataset = new float[row*column];
 
-    for (int i = 0 ; i < 4 ; i++){
-        for (int j = 0 ; j < 4 ; j++)
-        dataset[i][j]=0;
+    for (int i = 0 ; i < row*column ; i++){
+        dataset[i]=0;
     }
 }
 
-float Model::getDataset(int i, int j){
-    return dataset[i][j];
+Model::~Model(){
+    delete [] dataset;
 }
 
-void Model::setDataset(int i,int j, float v) {
-    dataset[i][j] = v;
+float Model::getDataset(int i, int j){
+    return dataset[i*column+j];
+}
+
+void Model::setDataset(int i, int j, float v) {
+    dataset[i*column+j] = v;
     notify();
 }
 void Model::addObserver(Observer* o) {
@@ -25,4 +29,14 @@ void Model::removeObserver(Observer* o) {
 void Model::notify() {
     for (Observer* observer : observers)
         observer->update();
+}
+
+int Model::getRow() const
+{
+    return row;
+}
+
+int Model::getColumn() const
+{
+    return column;
 }
