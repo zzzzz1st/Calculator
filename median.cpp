@@ -15,7 +15,12 @@ void Median::update(){
            vtmp.push_back(model->getDataset(i,j));
    }
    std::sort(vtmp.begin(), vtmp.end());
-   float tmp = (vtmp[7]+vtmp[8])/2;
+   float tmp;
+   int size = vtmp.size();
+   if((row*column)%2 == 0)
+       tmp = (vtmp[(size-1)/2]+vtmp[size/2])/2;
+   else
+       tmp = (vtmp[(size/2)]);
    qlabel->setNum(tmp);
 }
 
