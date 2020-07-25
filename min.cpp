@@ -6,15 +6,17 @@ Min::Min(Model *m, QLabel *v){
     qlabel = v;
 }
 void Min::update() {
-    int row = model->getRow();
+    float m = calculate();
+    qlabel->setNum(m);
+}
+
+float Min::calculate(){
     int column = model->getColumn();
-    float m = model->getDataset(0,0);
-        for (int i = 0; i < row ; i++){
+    float m = model->getDataset(0);
             for (int j = 0; j < column ; j++)
-                if (model->getDataset(i, j) < m)
-                    m = model->getDataset(i, j);
-        }
-        qlabel->setNum(m);
+                if (model->getDataset(j) < m)
+                    m = model->getDataset(j);
+            return m;
 }
 
 Min::~Min() {

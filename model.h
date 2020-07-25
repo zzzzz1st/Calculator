@@ -8,18 +8,16 @@
 class Model : Subject {
 
 public:
-    Model(int r, int c);
+    Model(int c);
     ~Model();
-    float getDataset(int i, int j);
-    void setDataset(int i,int j, float v);
+    float getDataset(int i);
+    void setDataset(int i, float v);
     virtual void addObserver(Observer* o);
     virtual void removeObserver(Observer* o);
     virtual void notify();
-    int getRow() const;
     int getColumn() const;
 
 private:
-    int row;
     int column;
     float *dataset;
     std::list<Observer*> observers;

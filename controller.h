@@ -12,12 +12,12 @@
 class Controller
 {
 public:
-     Controller(Model *m);
+     Controller(Model *modelmax, Model *modelmin, Model *modelsum, Model *modelmedian);
      void itemChanged(QTableWidgetItem *item);
 
 private:
-     Model *model;
      std::list<Observer*> observers;
+     std::vector<Model*> models;
 };
 
 #endif // CONTROLLER_H

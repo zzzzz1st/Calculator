@@ -11,23 +11,23 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     a.setWindowIcon(QIcon(":/images/calculator_main.ico"));
-    QString row = QInputDialog::getText(NULL, "Initializing...", "Number of rows:");
     QString column = QInputDialog::getText(NULL, "Initializing...", "Number of columns:");
-    if (row.toUInt()>100 && column.toUInt()>100){
+    if (column.toUInt()>10000){
         QMessageBox error;
-        error.critical(0,"Error","High dimension matrix. matrix will be resized to 4x4");
-        row.setNum(4);
+        error.critical(0,"Error","High dimension set. set will be resized to 4");
         column.setNum(4);
     }
-    Model model(row.toUInt(),column.toUInt());
-    Controller controller(&model);
+    Model modelmax(column.toUInt());
+    Model modelmin(column.toUInt());
+    Model modelsum(column.toUInt());
+    Model modelmedian(column.toUInt());
+    Controller controller(&modelmax, &modelmin, &modelsum, &modelmedian);
     Calculator w(&controller);
-    w.getQtable()->setRowCount(row.toUInt());
     w.getQtable()->setColumnCount(column.toUInt());
-    Max max(&model, w.getQmax());
-    Min min(&model, w.getQmin());
-    Sum sum(&model, w.getQsum());
-    Median median(&model, w.getQmedian());
+    Max max(&modelmax, w.getQmax());
+    Min min(&modelmin, w.getQmin());
+    Sum sum(&modelsum, w.getQsum());
+    Median median(&modelmedian, w.getQmedian());
     w.show();
     return a.exec();
 }

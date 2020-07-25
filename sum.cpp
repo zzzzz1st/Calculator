@@ -7,14 +7,16 @@ Sum::Sum(Model *m, QLabel *v){
 }
 
 void Sum::update(){
+    float sum = calculate();
+    qlabel->setNum(sum);
+}
+
+float Sum::calculate(){
     float sum = 0;
-    int row = model->getRow();
     int column = model->getColumn();
-        for (int i = 0 ; i < row ; i++){
             for (int j = 0 ; j < column ; j++)
-            sum += model->getDataset(i,j);
-        }
-        qlabel->setNum(sum);
+                sum += model->getDataset(j);
+            return sum;
 }
 
 Sum::~Sum() {

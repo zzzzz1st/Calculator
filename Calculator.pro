@@ -30,6 +30,7 @@ HEADERS += \
     Subject.h \
     calculator.h \
     controller.h \
+    formula.h \
     max.h \
     median.h \
     min.h \

@@ -1,9 +1,13 @@
 #include <controller.h>
 
-Controller::Controller(Model* m) : model(m){}
+Controller::Controller(Model *modelmax, Model *modelmin, Model *modelsum, Model *modelmedian){
+    models.push_back(modelmax);
+    models.push_back(modelmin);
+    models.push_back(modelsum);
+    models.push_back(modelmedian);
+}
 
 void Controller::itemChanged(QTableWidgetItem *item){
-    std::cout << item->row() << " " << item->column() << std::endl;
     int i = item->row();
     int j = item->column();
     bool number;
@@ -12,11 +16,11 @@ void Controller::itemChanged(QTableWidgetItem *item){
         QMessageBox error;
         error.critical(0,"Error","Please insert a float number !");
         error.setFixedSize(500,200);
-        model -> setDataset(i,j,0);
+        models[i] -> setDataset(j,0);
         QString tmp;
         item->setText(tmp.setNum(0));
         return;
     }
 
-    model -> setDataset(i,j,item->text().toFloat());
+    models[i] -> setDataset(j, item->text().toFloat());
 }

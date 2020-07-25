@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>228</width>
-    <height>378</height>
+    <width>418</width>
+    <height>399</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -218,22 +218,22 @@
       </attribute>
       <row>
        <property name="text">
-        <string>1</string>
+        <string>Max Cells</string>
        </property>
       </row>
       <row>
        <property name="text">
-        <string>2</string>
+        <string>Min Cells</string>
        </property>
       </row>
       <row>
        <property name="text">
-        <string>3</string>
+        <string>Sum Cells</string>
        </property>
       </row>
       <row>
        <property name="text">
-        <string>4</string>
+        <string>Median Cells</string>
        </property>
       </row>
       <column>
@@ -401,6 +401,16 @@
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>418</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

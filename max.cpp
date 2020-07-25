@@ -7,15 +7,19 @@ Max::Max(Model *m, QLabel *v){
 }
 
 void Max::update(){
-    float m = model->getDataset(0,0);
-    int row = model->getRow();
-    int column = model->getColumn();
-        for (int i = 0; i < row ; i++){
-            for (int j = 0; j < column ; j++)
-                if (model->getDataset(i, j) > m)
-                    m = model->getDataset(i, j);
-        }
+    float m = calculate();
         qlabel->setNum(m);
+}
+
+float Max::calculate(){
+    float m = model->getDataset(0);
+    int column = model->getColumn();
+        for (int j = 0; j < column ; j++){
+                if (model->getDataset(j) > m)
+                    m = model->getDataset(j);
+        }
+        return m;
+
 }
 
 Max::~Max() {
