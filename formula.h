@@ -4,6 +4,7 @@
 class Formula {
 
 public:
+    virtual ~Formula() {}
     virtual float calculate() = 0;
 };
 
